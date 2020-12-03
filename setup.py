@@ -30,7 +30,7 @@ setuptools.setup(
     description=package['description'],
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/timdaviss/mocking-utils',
+    url='https://github.com/do-py-together/mocking-utils',
     packages=setuptools.find_packages(),
     # https://pypi.org/classifiers/
     classifiers=[
