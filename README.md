@@ -5,3 +5,8 @@
 ![dependencies](https://img.shields.io/librariesio/release/pypi/mocking-utils?style=flat-square)
 
 Highly useful utilities for mocking execution flow during unit test execution.
+
+### Testing & Code Quality
+Code coverage reports for master, branches, and PRs 
+are posted [here in CodeCov](https://codecov.io/gh/timdaviss/mocking-utils).
+
