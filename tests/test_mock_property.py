@@ -4,7 +4,7 @@
 """
 
 from mocking_src.mock_property import MockProperty
-from testing.dummy import DummyCls
+from dummy import DummyCls
 
 
 class TestMockProperty(object):
