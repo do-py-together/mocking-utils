@@ -41,6 +41,7 @@ class MockFunction(object):
         self.cached_fn = getattr(self.obj, self.fn_name)
         self.is_classmethod = is_classmethod(obj, self.cached_fn)
         if call:
+            assert callable(self.response), 'Invalid mock callable.'
             # Check if it is a class method, so we can attach the mock fn correctly.
             if self.is_classmethod:
                 setattr(self.obj, self.fn_name, classmethod(self))

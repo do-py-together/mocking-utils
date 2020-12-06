@@ -45,34 +45,56 @@ class TestMockFunction(object):
         pytest.param(None, marks=pytest.mark.xfail),
         ])
     def test_invalid_mock(self, obj, fn_name):
+        """
+        :param obj: The object reference containing the fn_name to mock.
+        :type fn_name: str or types.NoneType
+        """
         mock = MockFunction(obj, fn_name, False)
         mock.reset()
 
-    @pytest.mark.parametrize('fn_name', [
-        'method',
-        'classmethod',
-        # 'staticmethod',
+    @pytest.mark.parametrize('obj, fn_name', [
+        (DummyCls(), 'method'),
+        (DummyCls, 'classmethod'),
+        # (DummyCls, 'staticmethod'),
         ])
-    def test_mock(self, fn_name):
+    def test_mock(self, obj, fn_name):
+        """
+        :param obj: instance or class reference for assertion.
+        :type fn_name: str
+        """
         mock = MockFunction(DummyCls, fn_name, False)
-        if fn_name in ['staticmethod', 'classmethod']:
-            obj = DummyCls
-        else:
-            obj = DummyCls()
         assert getattr(obj, fn_name)() is False
         mock.reset()
 
-    @pytest.mark.parametrize('fn_name', [
-        'method',
-        'classmethod',
-        # 'staticmethod',
+    @pytest.mark.parametrize('obj, fn_name', [
+        (DummyCls(), 'method'),
+        (DummyCls, 'classmethod'),
+        # (DummyCls, 'staticmethod'),
         ])
-    def test_mock_reset(self, fn_name):
+    def test_mock_call(self, obj, fn_name):
+        """
+        :param obj: instance or class reference for assertion.
+        :type fn_name: str
+        """
+        def _noop(*args, **kwargs):
+            """ No operation """
+            return False
+
+        mock = MockFunction(DummyCls, fn_name, _noop, call=True)
+        assert getattr(obj, fn_name)() is False
+        mock.reset()
+
+    @pytest.mark.parametrize('obj, fn_name', [
+        (DummyCls(), 'method'),
+        (DummyCls, 'classmethod'),
+        # (DummyCls, 'staticmethod'),
+        ])
+    def test_mock_reset(self, obj, fn_name):
+        """
+        :param obj: instance or class reference for assertion.
+        :type fn_name: str
+        """
         mock = MockFunction(DummyCls, fn_name, False)
-        if fn_name in ['staticmethod', 'classmethod']:
-            obj = DummyCls
-        else:
-            obj = DummyCls()
         assert getattr(obj, fn_name)() is False
         mock.reset()
         assert getattr(obj, fn_name)() is True
