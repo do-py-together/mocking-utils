@@ -7,6 +7,7 @@
 class MockRequest(object):
     """
     Mock a request with a response data and a status code.
+    Generally useful for mocking POST-request responses.
     """
     request_args = None
     request_kwargs = None
@@ -43,6 +44,7 @@ class MockRequest(object):
 class MockRequestHtml(object):
     """
     Mock a request with a response data and a status code.
+    Generally useful for mocking GET-request responses.
     """
 
     def __init__(self, status_code, html):
@@ -53,13 +55,4 @@ class MockRequestHtml(object):
         """
         self.status_code = status_code
         self.html = html
-
-    @property
-    def text(self, *args, **kwargs):
-        """
-        Returns the data that was passed into the Request. Similar to the Request.json() function.
-        :param args: ignored
-        :param kwargs: ignored
-        :rtype: str
-        """
-        return self.html
+        self.text = html

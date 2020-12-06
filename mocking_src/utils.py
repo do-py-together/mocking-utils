@@ -9,7 +9,8 @@ from itertools import chain, combinations
 def powerset(iterable, empty_is_valid=True):
     """
     :type iterable: list
-    :rtype: collections.Iterable
+    :type empty_is_valid: bool
+    :rtype: collections.Iterable[tuple]
     """
     s = iterable
     return (x for x in chain.from_iterable(combinations(s, r) for r in range(len(s) + 1)) if x or empty_is_valid)
