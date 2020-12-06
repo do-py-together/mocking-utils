@@ -1,7 +1,7 @@
 {
     "name": "mocking-utils",
     "description": "Highly useful utilities for mocking execution flow during unit test execution.",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "main": "index.js",
     "repository": "git@github.com:do-py-together/mocking-utils.git",
     "author": "Tim Davis <timdavis.3991@gmail.com>",
