@@ -4,7 +4,7 @@
 
 import pytest
 
-from mocking_src.data_model import Mocked
+from mocking_utils.data_model import Mocked
 
 
 class TestMocked(object):

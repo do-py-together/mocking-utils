@@ -5,7 +5,7 @@
 import pytest
 
 from dummy import DummyCls
-from mocking_src.mock_function import MockFunction
+from mocking_utils.mock_function import MockFunction
 
 
 class TestMockFunction(object):

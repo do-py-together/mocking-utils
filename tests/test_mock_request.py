@@ -4,7 +4,7 @@
 
 import pytest
 
-from mocking_src.mock_request import MockRequest, MockRequestHtml
+from mocking_utils.mock_request import MockRequest, MockRequestHtml
 
 
 class TestMockRequest(object):

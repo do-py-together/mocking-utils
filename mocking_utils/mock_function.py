@@ -3,7 +3,7 @@
 :date_created: 2020-12-02
 """
 
-from mocking_src.utils import is_classmethod
+from mocking_utils.utils import is_classmethod
 
 
 class MockFunction(object):

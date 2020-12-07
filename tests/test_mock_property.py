@@ -3,7 +3,7 @@
 :date_created: 2020-12-02
 """
 
-from mocking_src.mock_property import MockProperty
+from mocking_utils.mock_property import MockProperty
 from dummy import DummyCls
 
 

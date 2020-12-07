@@ -3,7 +3,7 @@
 """
 import pytest
 
-from mocking_src.utils import powerset, powerset_concat
+from mocking_utils.utils import powerset, powerset_concat
 
 
 @pytest.mark.parametrize('iterable, empty_is_valid, expected_output', [
