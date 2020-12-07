@@ -35,7 +35,7 @@ def setup__teardown():
     Standard setup & teardown within a module of unit tests.
     """
     mocks = [
-        MockFunction()
+        MockFunction(A, 'my_method', lambda x: print('lambda function'), call=True)
         ]
     yield 'Setup complete'
     [mock.reset() for mock in mocks]
