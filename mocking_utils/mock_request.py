@@ -12,7 +12,7 @@ class MockRequest(object):
     request_args = None
     request_kwargs = None
 
-    def __init__(self, status_code, data):
+    def __init__(self, status_code, data, headers=None):
         """
         Initializes the function and sets the variables.
         :param status_code: This is the expected status code of the request.
@@ -20,6 +20,7 @@ class MockRequest(object):
         """
         self.status_code = status_code
         self.data = data
+        self.headers = headers
 
     def __call__(self, *args, **kwargs):
         """
