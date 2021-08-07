@@ -6,6 +6,10 @@ verify_ssl = true
 [scripts]
 lint = "pylint mocking_src"
 
+[packages]
+more-itertools = "==5.0.0"
+mocking-utils = {editable = true, path = "."}
+
 [dev-packages]
 pytest = "==3.7.0"
 pytest-cov = "==2.5.1"
@@ -16,9 +20,6 @@ coverage = "==4.5.1"
 twine = "==1.15.0"
 ipython = "==5.8.0"
 pylint = "==1.9.5"
-
-[packages]
-more-itertools = "==5.0.0"
 
 [requires]
 python_version = "2.7"

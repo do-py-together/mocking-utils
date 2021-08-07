@@ -31,6 +31,9 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/do-py-together/mocking-utils',
+    install_requires=[
+        'more-itertools==5.0.0'
+        ],
     packages=setuptools.find_packages(),
     # https://pypi.org/classifiers/
     classifiers=[
