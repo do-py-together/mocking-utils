@@ -34,7 +34,7 @@ setuptools.setup(
     install_requires=[
         'more-itertools==6.0.0'
         ],
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(exclude=['tests', 'tests.*']),
     # https://pypi.org/classifiers/
     classifiers=[
         'Development Status :: 3 - Alpha',
