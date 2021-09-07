@@ -7,8 +7,7 @@ verify_ssl = true
 lint = "pylint mocking_src"
 
 [packages]
-more-itertools = "==5.0.0"
-mocking-utils = {editable = true, path = "."}
+mocking-utils = { editable = true, path = "." }
 
 [dev-packages]
 pytest = "==3.7.0"
@@ -19,7 +18,3 @@ pytest-xdist = "==1.20.1"
 coverage = "==4.5.1"
 twine = "==1.15.0"
 ipython = "==5.8.0"
-pylint = "==1.9.5"
-
-[requires]
-python_version = "2.7"
