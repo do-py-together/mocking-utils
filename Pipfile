@@ -7,6 +7,7 @@ verify_ssl = true
 lint = "pylint mocking_src"
 
 [packages]
+more-itertools = "==6.0.0"
 mocking-utils = { editable = true, path = "." }
 
 [dev-packages]
