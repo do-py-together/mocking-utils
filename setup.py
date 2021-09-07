@@ -32,7 +32,7 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     url='https://github.com/do-py-together/mocking-utils',
     install_requires=[
-        'more-itertools==5.0.0'
+        'more-itertools==6.0.0'
         ],
     packages=setuptools.find_packages(),
     # https://pypi.org/classifiers/
@@ -48,6 +48,7 @@ setuptools.setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.7',
         ],
     keywords=['development', 'OO']
     )
